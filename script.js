@@ -8,23 +8,16 @@ window.requestAnimFrame = (function() {
 var canvas = document.getElementById("c");
 var ctx = canvas.getContext("2d");
 
-//window.setInterval(tick, 1);
-
 var lines = [];
 var linePitches = [];
 var lineOffsets = [];
 var lineDirections = [];
 var lineTimers = [];
-var mx,
-    my;
+
 canvas.style.position = "absolute";
 canvas.style.left = document.body.clientWidth / 2 - 250 + "px";
 canvas.style.top = window.innerHeight / 2 - 250 + "px";
-canvas.onmousemove = function(event) {
-    mx = event.layerX;
-    my = event.layerY;
-    console.log(mx, my);
-};
+
 for (var i = 0; i < 10; i++) {
     lines[i] = i / 10;
     lineOffsets[i] = Math.random();
